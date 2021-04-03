@@ -8,8 +8,8 @@ import (
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		// w.Write([]byte("hello go"))
-		http.ServeFile(w, r, "wwwroot"+r.URL.Path)
+		w.Write([]byte("hello go"))
+		// http.ServeFile(w, r, "wwwroot"+r.URL.Path)
 	})
 	http.ListenAndServe(GetPort(), nil)
 
